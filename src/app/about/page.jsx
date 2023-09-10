@@ -25,7 +25,7 @@ const aboutContent = [
 
 const About = () => {
   return (
-    <div id="about" className="w-full h-min min-h-[calc(100dvh-95px)] grid grid-cols-[3fr,1fr] justify-items-end items-start gap-[120px]">
+    <div id="about" className="w-full h-min min-h-[calc(100dvh-85px)] grid grid-cols-[3fr,1fr] justify-items-end items-start gap-[120px]">
       <div className="flex flex-col justify-start items-center w-[90%] max-w-[940px] h-min mt-[5rem]">
         <motion.div
           className="w-full h-min text-center text-[32px] font-[600] tracking-[7px] uppercase"

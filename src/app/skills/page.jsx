@@ -20,7 +20,7 @@ const skillsIntro = [
     key: "card3"
   },
 ]
-const IconClassName = "w-[22px] h-auto fill-primary"
+const IconClassName = "w-[22px] h-auto fill-light/[.7]"
 const skills = [
   {
     category: 'Programming Languages',
@@ -44,7 +44,7 @@ const skills = [
     ],
   },
   {
-    category: 'Frameworks',
+    category: 'Frameworks & Libraries',
     list: [
       {name: 'ReactJS', icon: <Icons.ReactIcon className={`${IconClassName}`} />},
       {name: 'NextJS', icon: <Icons.NextJSIcon className={`${IconClassName}`} />},
@@ -54,7 +54,7 @@ const skills = [
     ],
   },
   {
-    category: 'Styling and Design',
+    category: 'Styling & Design',
     list: [
       {name: 'FIGMA', icon: <Icons.FigmaIcon className={`${IconClassName}`} />},
       {name: 'Adobe Photoshop', icon: <Icons.PhotoshopIcon className={`${IconClassName}`} />},
@@ -71,7 +71,7 @@ const skills = [
     ],
   },
   {
-    category: 'Collaboration and Communication',
+    category: 'Collaboration & Communication',
     list: [
       {name: 'Teamwork', icon: <Icons.TeamWorkIcon className={`${IconClassName}`} />},
       {name: 'Open-Mindedness', icon: <Icons.OpenMindednessIcon className={`${IconClassName}`} />},
@@ -92,7 +92,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div id="skills" className="w-full h-min min-h-[calc(100dvh-95px)] flex justify-center items-center z-10">
+    <div id="skills" className="w-full h-min min-h-[calc(100dvh-85px)] flex justify-center items-center z-10">
       <div className="flex flex-col justify-center items-center w-[90%] max-w-[940px] h-min mt-[5rem]">
         <motion.div
           className="w-full h-min text-center text-[32px] font-[600] tracking-[7px] uppercase"
@@ -121,19 +121,19 @@ const Skills = () => {
             <p>Welcome to the intersection of my journey. This section offers a glimpse into the <strong className="text-light font-[500]">merging</strong> of my background in <strong className="text-light font-[500]">robotics</strong> engineering and my fresh exploration in <strong className="text-light font-[500]">web development</strong>. The <strong className="text-light font-[500]">skill</strong> showcases ahead present a blend of past expertise and new endeavors. As you explore further, you will see how my experiences shape a <strong className="text-light font-[500]">diverse</strong> portfolio. It is a reflection of my <strong className="text-light font-[500]">commitment to growth</strong> and a showcase of the skills that define my path. Join me on this visual journey where each skill adds to the story of my <strong className="text-light font-[500]">progression</strong>.</p>
           </div>
 
-          <div className="w-[95%] h-min mt-[40px] mb-[10rem] grid grid-cols-6 grid-rows-[fit,fit,fit] gap-4 [&>*:nth-child(2)]:col-span-3 [&>*:nth-child(6)]:col-span-4">
+          <div className="w-[95%] h-min mt-[40px] mb-[10rem] grid grid-cols-6 grid-rows-[fit,fit,fit] gap-5 [&>*:nth-child(2)]:col-span-3 [&>*:nth-child(6)]:col-span-4">
             {skills.map(skillCategory => (
-              <div key={skillCategory.category} className="col-span-2 first:col-span-3 flex flex-col border-2 border-gray rounded-xl">
-                <h3 className="w-full h-min py-[2px] pr-[10px] text-end text-[12px] rounded-t-lg font-[600] uppercase tracking-[1.5px] text-primary bg-gray">
+              <div key={skillCategory.category} className="col-span-2 first:col-span-3 flex flex-col border-2 border-[#444753] rounded-xl">
+                <h3 className="w-full h-min pr-[10px] text-end text-[12px] rounded-t-lg font-[600] uppercase tracking-[1.5px] text-light bg-[#444753]">
                   {skillCategory.category}
                 </h3>
                 <div className="w-full h-min flex flex-wrap gap-[5px] p-[6px]">
                   {skillCategory.list.map(skill => (
-                    <div key={skill.name} className="w-min h-min flex items-center px-[5px] py-[6px] bg-gray rounded-md">
+                    <div key={skill.name} className="w-min h-min flex items-center px-[5px] py-[6px] bg-[#444753] rounded-md">
                       <div className="mx-1">
                         {skill.icon}
                       </div>
-                      <div className="block whitespace-nowrap text-[16px] font-[400] text-primary">
+                      <div className="block whitespace-nowrap text-[16px] font-[400] text-light/[0.8]">
                         {skill.name}
                       </div>
                     </div>

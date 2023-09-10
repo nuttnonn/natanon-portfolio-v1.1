@@ -13,7 +13,7 @@ const homeContent = [
 
 export default function Home() {
   return (
-    <div className="flex w-full h-min min-h-[calc(100dvh-95px)] justify-center items-center">
+    <div className="flex w-full h-min min-h-[calc(100dvh-85px)] justify-center items-center">
       <div className="flex flex-col justify-center items-center w-[90%] max-w-[1000px] h-min text-light">
         {homeContent.map(content =>(
           <div key={content.title} className="flex flex-col justify-center items-center">
