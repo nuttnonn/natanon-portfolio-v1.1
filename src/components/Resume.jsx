@@ -15,7 +15,7 @@ const Logo = () => {
       setTextStyles("text-[20px] font-[700]")
     } else {
       setText("R")
-      setTextStyles("text-[30px] font-[900] ")
+      setTextStyles("text-[30px] font-[900]")
     }
   }
 
@@ -28,7 +28,7 @@ const Logo = () => {
       className="w-[50px] h-[50px] mr-[10px] flex justify-center items-center bg-lightPurple rounded-[25px] hover:w-[120px] ease-in-out duration-300"
       whileTap={{scale:0.9, backgroundColor:"#616173"}}
     >
-      <div className={`pr - [3px] text-center text-primary overflow-hidden ease-in-out duration-300 ${textStyles}`}>{text}</div>
+      <div className={`pr - [3px] text-center text-primary overflow-hidden ease-in-out duration-500 ${textStyles}`}>{text}</div>
     </MotionLink>
   )
 }
