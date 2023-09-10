@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import ColorSplash from '/public/colorSplash.png'
 import * as Icons from '../../components/Icons'
+import './projects.css'
 
 const skillsIntro = [
   {
@@ -110,7 +111,7 @@ const Skills = () => {
             <Image src={ColorSplash} alt="color-splash" className="w-full row-start-1 row-end-2 col-start-1 col-end-3" />
             <div className="row-start-1 row-end-2 col-start-2 col-end-3 z-1">
               {skillsIntro.map(item => (
-                <div key={item.key} className="w-min h-min text-[60px] font-[800] text-gray uppercase tracking-[15px]">
+                <div key={item.key} className="introTitle w-min h-min text-[60px] font-[800] text-gray uppercase tracking-[15px]">
                   {item.title}
                 </div>
               ))}
