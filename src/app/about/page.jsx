@@ -5,6 +5,8 @@ import {motion} from 'framer-motion'
 import profilePicture from '/public/profilePicture.jpg'
 import Image from 'next/image'
 
+export const runtime = 'edge';
+
 const aboutContent = [
   {
     title: 'past - 2019',
@@ -38,10 +40,10 @@ const About = () => {
           {aboutContent.map(content =>(
             <motion.div
               key={content.title}
-              className="w-full h-min grid grid-cols-[22%,auto] grid-rows-[auto,auto] justify-items-start items-start"
+              className="w-full h-min grid grid-cols-[22%,auto] justify-items-start items-start"
               initial={{opacity:0, y:-150}}
               animate={{opacity:1, y:0, transition:{duration:0.6, delay:0.48, ease:[0, 0.71, 0.2, 1.01]}}}>
-              <div className="w-full h-full flex justify-start items-center text-gray text-[14px] font-[500] uppercase tracking-[3px]">
+              <div className="w-full flex justify-start items-center leading-[33px] text-gray text-[14px] font-[500] uppercase tracking-[3px]">
                 {content.title}
               </div>
               <div className="w-full h-min text-start text-[22px] text-light font-[500] tracking-normal capitalize">

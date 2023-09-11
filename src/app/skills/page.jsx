@@ -7,6 +7,8 @@ import ColorSplash from '/public/colorSplash.png'
 import * as Icons from '../../components/Icons'
 import './projects.css'
 
+export const runtime = 'edge';
+
 const skillsIntro = [
   {
     title: "live",
@@ -78,6 +80,7 @@ const skills = [
       {name: 'Open-Mindedness', icon: <Icons.OpenMindednessIcon className={`${IconClassName}`} />},
       {name: 'Problem Solving', icon: <Icons.ProblemSolvingIcon className={`${IconClassName}`} />},
       {name: 'Time Management', icon: <Icons.TimeManagementIcon className={`${IconClassName}`} />},
+      {name: 'Division of Labour', icon: <Icons.TimeManagementIcon className={`${IconClassName}`} />},
       {name: 'Clear Documentation', icon: <Icons.ClearDocumentIcon className={`${IconClassName}`} />}
     ],
   },

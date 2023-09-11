@@ -4,6 +4,8 @@ import React from 'react'
 import {motion} from 'framer-motion'
 import Link from 'next/link'
 
+export const runtime = 'edge';
+
 const homeContent = [
   {
     title:"Welcome, I'm Natanon Trangratanajit",
