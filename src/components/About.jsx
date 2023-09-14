@@ -39,7 +39,7 @@ const About = () => {
             <h2 className="w-[90%] h-min flex justify-start items-center text-[16px] font-[400]">I&apos;m&nbsp;a front-end developer based in Bangkok, Thailand. I love to create things. And now I have a passion for bringing ideas to life through code.</h2>
           </div>
           <div className="w-[50%] h-min">
-            {/*<Image src={ManPicture} alt="manPic" className="w-full h-auto" />*/}
+            <Image src={ManPicture} alt="manPic" className="w-full h-auto" />
           </div>
         </motion.div>
 
