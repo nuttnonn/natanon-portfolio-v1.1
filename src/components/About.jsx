@@ -2,8 +2,8 @@
 
 import React from 'react'
 import {motion} from 'framer-motion'
-import profilePicture from '/public/profilePicture.jpg'
 import Image from 'next/image'
+import ManPicture from '../../public/man-about.svg'
 
 export const runtime = 'edge';
 
@@ -27,42 +27,42 @@ const aboutContent = [
 
 const About = () => {
   return (
-    <div id="about" className="w-full h-min min-h-[calc(100dvh-85px)] grid grid-cols-[3fr,1fr] justify-items-end items-start gap-[120px]">
-      <div className="flex flex-col justify-start items-center w-[90%] max-w-[940px] h-min mt-[5rem]">
+    <div id="about" className="w-full h-min min-h-[calc(100dvh-76px)] flex justify-center items-start bg-light text-primary">
+      <div className="flex flex-col justify-start items-center w-[90%] max-w-[900px] h-min my-[96px]">
         <motion.div
-          className="w-full h-min text-center text-[32px] font-[600] tracking-[7px] uppercase"
+          className="w-full h-min flex justify-between items-center"
           initial={{opacity:0, y:-200}}
-          animate={{opacity:1, y:0, transition:{duration:0.6, delay:0.5, ease:[0, 0.71, 0.2, 1.01]}}}>
-          <h1 className="w-min h-min">About</h1>
-          <motion.div className="mt-1 w-full h-px bg-light" initial={{opacity:0, y:-200}} animate={{opacity:1, y:0, transition:{duration:0.6, delay:0.25, ease:[0, 0.71, 0.2, 1.01]}}} />
+          animate={{opacity:1, y:0, transition:{duration:0.6, delay:0.5, ease:[0, 0.71, 0.2, 1.01]}}}
+        >
+          <div className="w-[45%] h-min">
+            <h1 className="w-min h-min text-[44px] font-[900] uppercase">about</h1>
+            <h2 className="w-[90%] h-min flex justify-start items-center text-[16px] font-[400]">I&apos;m&nbsp;a front-end developer based in Bangkok, Thailand. I love to create things. And now I have a passion for bringing ideas to life through code.</h2>
+          </div>
+          <div className="w-[50%] h-min">
+            <Image src={ManPicture} alt="mangif" className="w-full h-auto" />
+          </div>
         </motion.div>
-        <div className="flex flex-col gap-[40px] w-[88%] h-min mt-[50px]">
+
+        <div className="w-full h-min flex flex-col justify-center items-center gap-[44px] mt-[40px]">
           {aboutContent.map(content =>(
             <motion.div
               key={content.title}
-              className="w-full h-min grid grid-cols-[22%,auto] justify-items-start items-start"
+              className="w-[85%] h-min grid grid-cols-[20%,auto] justify-items-start items-start"
               initial={{opacity:0, y:-150}}
               animate={{opacity:1, y:0, transition:{duration:0.6, delay:0.48, ease:[0, 0.71, 0.2, 1.01]}}}>
-              <div className="w-full flex justify-start items-center leading-[33px] text-gray text-[14px] font-[500] uppercase tracking-[3px]">
+              <div className="w-full flex justify-start items-center leading-[27px] text-[14px] font-[600] uppercase">
                 {content.title}
               </div>
-              <div className="w-full h-min text-start text-[22px] text-light font-[500] tracking-normal capitalize">
+              <div className="w-full h-min text-start text-[18px] font-[600] capitalize">
                 {content.subTitle}
               </div>
-              <span className="col-start-2 w-full h-min mt-1.5 text-gray text-start font-[300] text-[18px] tracking-normal leading-7">
+              <span className="col-start-2 w-full h-min mt-[8px] text-[16px] text-start font-[300]">
                 {content.description}
               </span>
             </motion.div>
           ))}
         </div>
       </div>
-
-      <motion.div
-        className="w-full max-w-[350px] h-min"
-        initial={{opacity:0, y:-200}}
-        animate={{opacity:1, y:0, transition:{duration:0.6, delay:0.5, ease:[0, 0.71, 0.2, 1.01]}}}>
-        <Image src={profilePicture} alt="profile-picture" className="w-full h-auto rounded-bl-[50px]" />
-      </motion.div>
     </div>
   );
 };

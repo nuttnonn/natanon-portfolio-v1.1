@@ -4,8 +4,8 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import ColorSplash from '/public/colorSplash.png'
-import * as Icons from '../../components/Icons'
-import './projects.css'
+import * as Icons from './Icons'
+import './Skills.css'
 
 export const runtime = 'edge';
 
@@ -121,19 +121,19 @@ const Skills = () => {
             </div>
           </div>
 
-          <div className="w-[90%] h-min mt-[40px] text-[18px] text-gray text-start font-[300] indent-10 leading-loose">
+          <div className="w-[90%] h-min mt-[40px] text-[16px] text-gray text-start font-[400] indent-10 leading-loose">
             <p>Welcome to the intersection of my journey. This section offers a glimpse into the <strong className="text-light font-[500]">merging</strong> of my background in <strong className="text-light font-[500]">robotics</strong> engineering and my fresh exploration in <strong className="text-light font-[500]">web development</strong>. The <strong className="text-light font-[500]">skill</strong> showcases ahead present a blend of past expertise and new endeavors. As you explore further, you will see how my experiences shape a <strong className="text-light font-[500]">diverse</strong> portfolio. It is a reflection of my <strong className="text-light font-[500]">commitment to growth</strong> and a showcase of the skills that define my path. Join me on this visual journey where each skill adds to the story of my <strong className="text-light font-[500]">progression</strong>.</p>
           </div>
 
           <div className="w-[95%] h-min mt-[40px] mb-[10rem] grid grid-cols-6 grid-rows-[fit,fit,fit] gap-5 [&>*:nth-child(2)]:col-span-3 [&>*:nth-child(6)]:col-span-4">
             {skills.map(skillCategory => (
-              <div key={skillCategory.category} className="col-span-2 first:col-span-3 flex flex-col border-2 border-[#444753] rounded-xl">
-                <h3 className="w-full h-min pr-[10px] text-end text-[12px] rounded-t-lg font-[600] uppercase tracking-[1.5px] text-light bg-[#444753]">
+              <div key={skillCategory.category} className="col-span-2 first:col-span-3 flex flex-col border-2 border-secondary rounded-xl">
+                <h3 className="w-full h-min pr-[10px] text-end text-[12px] rounded-t-lg font-[600] uppercase text-light bg-secondary">
                   {skillCategory.category}
                 </h3>
                 <div className="w-full h-min flex flex-wrap gap-[5px] p-[6px]">
                   {skillCategory.list.map(skill => (
-                    <div key={skill.name} className="w-min h-min flex items-center px-[5px] py-[6px] bg-[#444753] rounded-md">
+                    <div key={skill.name} className="w-min h-min flex items-center px-[5px] py-[6px] bg-secondary rounded-md">
                       <div className="mx-1">
                         {skill.icon}
                       </div>

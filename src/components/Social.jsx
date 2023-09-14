@@ -6,7 +6,7 @@ import Link from 'next/link'
 import {InstagramIcon, LinkedinIcon, GithubSocialIcon, GmailIcon} from './Icons'
 
 const MotionLink = motion(Link)
-const IconClassName = "w-[40px] h-auto fill-gray hover:fill-light hover:ease-in-out duration-300"
+const IconClassName = "w-[32px] h-auto fill-light hover:fill-secondary hover:ease-in-out duration-300"
 
 const Social = () => {
   return (

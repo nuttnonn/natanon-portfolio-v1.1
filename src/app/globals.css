@@ -17,10 +17,10 @@
 }
 
 body {
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(16, 16, 19)
-    )
-    rgb(var(--background-start-rgb));
+  /*background: linear-gradient(*/
+  /*    to bottom,*/
+  /*    transparent,*/
+  /*    rgb(16, 16, 19)*/
+  /*  )*/
+  /*  rgb(var(--background-start-rgb));*/
 }

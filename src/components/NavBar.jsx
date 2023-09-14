@@ -12,25 +12,25 @@ const CustomLink = ({href, title, className=""}) => {
   return(
     <Link href={href} className={`${className} relative group`}>
       {title}
-      <div className={`h-px inline-block bg-light absolute -left-0.5 bottom-2 group-hover:w-full transition-all ease duration-300 ${pathname === href ? 'w-full' : 'w-0'}`} />
+      <div className={`w-full h-0 inline-block bg-secondary absolute -left-[1px] top-[18px] group-hover:h-[4px] transition-all ease duration-200 ${pathname === href ? 'w-full' : 'w-0'}`} />
     </Link>
   )
 }
 
 const NavBar = () => {
   return (
-    <div className="w-full h-min flex justify-center items-center sticky top-0">
-      <div className="w-[98%] h-[70px] flex justify-between items-center mt-[15px] bg-darkPurple/[.15] rounded-[35px] hover:bg-darkPurple/[.6] ease-in-out duration-300 backdrop-blur-md">
-        <div className="w-min h-min flex justify-center items-center gap-5">
+    <div className="w-full h-full flex justify-center items-center sticky top-0">
+      <div className="w-[90%] max-w-[900px] h-[56px] flex justify-between items-center mt-[20px] bg-primary/[.3] rounded-[35px] hover:bg-dark/[.7] hover:shadow-lg ease-in-out duration-300 backdrop-blur-md">
+        <div className="flex justify-center items-center">
           <Logo />
-          <div className="flex items-center ml-2 space-x-[20px] text-[12px] font-[400] tracking-[5px] uppercase">
-            <CustomLink href="/" title="/Home" className="hover:italic" />
-            <CustomLink href="/about" title="/About" className="hover:italic" />
-            <CustomLink href="/skills" title="/Skills" className="hover:italic" />
-            <CustomLink href="/projects" title="/Projects" className="hover:italic" />
+          <div className="flex items-center ml-[36px] space-x-[20px] text-[12px] font-[600] tracking-[2px] uppercase">
+            <CustomLink href="/#home" title="/Home" />
+            <CustomLink href="/#about" title="/About" />
+            <CustomLink href="/#skills" title="/Skills" />
+            <CustomLink href="/#projects" title="/Projects" />
           </div>
         </div>
-        <div className="w-min h-min flex justify-center items-center gap-5">
+        <div className="flex justify-center items-center gap-[16px]">
           <Social />
           <Resume />
         </div>

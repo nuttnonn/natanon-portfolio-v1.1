@@ -8,14 +8,14 @@ const MotionLink = motion(Link)
 
 const Logo = () => {
   const [text, setText] = useState('R')
-  const [textStyles, setTextStyles] = useState('text-[30px] font-[900]')
+  const [textStyles, setTextStyles] = useState('text-[24px] font-[900]')
   const handleHover = () => {
     if (text === "R"){
       setText("Resume")
-      setTextStyles("text-[20px] font-[700]")
+      setTextStyles("text-[16px] font-[700]")
     } else {
       setText("R")
-      setTextStyles("text-[30px] font-[900]")
+      setTextStyles("text-[24px] font-[900]")
     }
   }
 
@@ -25,10 +25,10 @@ const Logo = () => {
       target="_blank"
       onHoverStart={handleHover}
       onHoverEnd={handleHover}
-      className="w-[50px] h-[50px] mr-[10px] flex justify-center items-center bg-lightPurple rounded-[25px] hover:w-[120px] ease-in-out duration-300"
-      whileTap={{scale:0.9, backgroundColor:"#616173"}}
+      className="w-[40px] h-[40px] mr-[8px] flex justify-center items-center border-[1px] border-gray rounded-[25px] hover:w-[100px] ease-in-out duration-300"
+      whileTap={{scale:0.8, backgroundColor:"#616173"}}
     >
-      <div className={`pr - [3px] text-center text-primary overflow-hidden ease-in-out duration-500 ${textStyles}`}>{text}</div>
+      <div className={`text-center text-light overflow-hidden ease-in-out duration-300 ${textStyles}`}>{text}</div>
     </MotionLink>
   )
 }
