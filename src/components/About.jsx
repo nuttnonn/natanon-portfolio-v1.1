@@ -4,7 +4,7 @@ import React from 'react'
 import {motion} from 'framer-motion'
 import * as Icons from './Icons'
 
-// export const runtime = 'edge';
+export const runtime = 'edge';
 
 const aboutContent = [
   {

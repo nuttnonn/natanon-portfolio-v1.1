@@ -4,7 +4,7 @@ import React from 'react'
 import {motion} from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
-import profilePicture from '../../public/profilePicture.jpg'
+import profilePicture from "../../public/profilePicture.JPG"
 
 export const runtime = 'edge';
 
