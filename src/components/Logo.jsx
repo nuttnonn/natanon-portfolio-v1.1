@@ -5,12 +5,18 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 const MotionLink = motion(Link)
+const home = "/"
+
+const handleRefresh = () => {
+  home.reload();
+}
 
 const Logo = () => {
   return (
     <MotionLink
       href="/"
       className="w-[40px] h-[40px] ml-[8px] flex justify-center items-center bg-light rounded-[50%] overflow-hidden"
+      onClick={handleRefresh}
       whileHover={{scale:1.3, rotate:180}}
       whileTap={{scale:1.1, backgroundColor:"#616173"}}
     >

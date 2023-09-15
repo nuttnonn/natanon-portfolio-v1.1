@@ -20,7 +20,7 @@ const CustomLink = ({href, title, className=""}) => {
 const NavBar = () => {
   return (
     <div className="w-full h-full flex justify-center items-center sticky top-0">
-      <div className="w-[90%] max-w-[900px] h-[56px] flex justify-between items-center mt-[20px] bg-primary/[.3] rounded-[35px] hover:bg-dark/[.7] hover:shadow-lg ease-in-out duration-300 backdrop-blur-md">
+      <div className="w-[90%] max-w-[900px] h-[56px] flex justify-between items-center mt-[20px] bg-primary/[.2] rounded-[35px] hover:bg-dark/[.55] hover:shadow-lg ease-in-out duration-300 backdrop-blur-md">
         <div className="flex justify-center items-center">
           <Logo />
           <div className="flex items-center ml-[36px] space-x-[20px] text-[12px] font-[600] tracking-[2px] uppercase">

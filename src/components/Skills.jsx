@@ -3,27 +3,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import ColorSplash from '/public/colorSplash.png'
 import * as Icons from './Icons'
+import developerPicture from '../../public/developer.svg'
 import './Skills.css'
 
 export const runtime = 'edge';
-
-const skillsIntro = [
-  {
-    title: "live",
-    key: "card1"
-  },
-  {
-    title: "and",
-    key: "card2"
-  },
-  {
-    title: "learn",
-    key: "card3"
-  },
-]
-const IconClassName = "w-[22px] h-auto fill-light/[.7]"
+const IconClassName = "w-[20px] h-auto fill-secondary"
 const skills = [
   {
     category: 'Programming Languages',
@@ -96,48 +81,42 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div id="skills" className="w-full h-min min-h-[calc(100dvh-85px)] flex justify-center items-center z-10">
-      <div className="flex flex-col justify-center items-center w-[90%] max-w-[940px] h-min mt-[5rem]">
+    <div id="skills" className="w-full h-min min-h-screen flex justify-center items-center bg-light text-primary">
+      <div className="w-[90%] max-w-[1000px] h-min my-[160px] flex flex-col justify-start items-center">
         <motion.div
-          className="w-full h-min text-center text-[32px] font-[600] tracking-[7px] uppercase"
+          className="w-full h-min flex justify-between items-center"
           initial={{opacity:0, y:-200}}
           animate={{opacity:1, y:0, transition:{duration:0.6, delay:0.5, ease:[0, 0.71, 0.2, 1.01]}}}>
-          <h1 className="w-min h-min">Skills</h1>
-          <motion.div className="mt-1 w-full h-px bg-light" initial={{opacity:0, y:-200}} animate={{opacity:1, y:0, transition:{duration:0.6, delay:0.25, ease:[0, 0.71, 0.2, 1.01]}}} />
+          <div className="w-[40%] h-min flex flex-col justify-center items-start">
+            <h1 className="w-min h-min text-[44px] font-[900] uppercase">skills</h1>
+            <h2 className="w-[90%] h-min flex justify-start items-center text-dark text-[16px] font-[700] mt-[8px]">Here, my old and fresh skills. All will be dedicated to crafting digital experiences.</h2>
+          </div>
+          <div className="w-[58%] h-auto self-end">
+            <Image src={developerPicture} alt="developer-picture" />
+          </div>
         </motion.div>
 
         <motion.div
-          className="w-full h-min mt-[40px] flex flex-col items-center"
+          className="w-full h-min mt-[120px] flex flex-col items-center"
           initial={{opacity:0, y:-150}}
           animate={{opacity:1, y:0, transition:{duration:0.6, delay:0.48, ease:[0, 0.71, 0.2, 1.01]}}}>
-          <div className="w-[90%] grid grid-rows-1 grid-cols-[2fr,1fr] justify-items-start items-center">
-            <Image src={ColorSplash} alt="color-splash" className="w-full row-start-1 row-end-2 col-start-1 col-end-3" />
-            <div className="row-start-1 row-end-2 col-start-2 col-end-3 z-1">
-              {skillsIntro.map(item => (
-                <div key={item.key} className="introTitle w-min h-min text-[60px] font-[800] text-gray uppercase tracking-[15px]">
-                  {item.title}
-                </div>
-              ))}
-            </div>
+          <div className="w-[80%] h-min text-[18px] text-dark text-start font-[300] indent-[48px] leading-relaxed">
+            Welcome to the intersection of my journey. This section offers a glimpse into the <strong className="font-[500]">merging</strong> of my background in <strong className="font-[500]">robotics</strong> engineering and my fresh exploration in <strong className="font-[500]">web development</strong>. The <strong className="font-[500]">skill</strong> showcases ahead present a blend of past expertise and new endeavors. As you explore further, you will see how my experiences shape a <strong className="font-[500]">diverse</strong> portfolio. It is a reflection of my <strong className="font-[500]">commitment to growth</strong> and a showcase of the skills that define my path. Join me on this visual journey where each skill adds to the story of my <strong className="font-[500]">progression</strong>.
           </div>
 
-          <div className="w-[90%] h-min mt-[40px] text-[16px] text-gray text-start font-[400] indent-10 leading-loose">
-            <p>Welcome to the intersection of my journey. This section offers a glimpse into the <strong className="text-light font-[500]">merging</strong> of my background in <strong className="text-light font-[500]">robotics</strong> engineering and my fresh exploration in <strong className="text-light font-[500]">web development</strong>. The <strong className="text-light font-[500]">skill</strong> showcases ahead present a blend of past expertise and new endeavors. As you explore further, you will see how my experiences shape a <strong className="text-light font-[500]">diverse</strong> portfolio. It is a reflection of my <strong className="text-light font-[500]">commitment to growth</strong> and a showcase of the skills that define my path. Join me on this visual journey where each skill adds to the story of my <strong className="text-light font-[500]">progression</strong>.</p>
-          </div>
-
-          <div className="w-[95%] h-min mt-[40px] mb-[10rem] grid grid-cols-6 grid-rows-[fit,fit,fit] gap-5 [&>*:nth-child(2)]:col-span-3 [&>*:nth-child(6)]:col-span-4">
+          <div className="w-[85%] h-min mt-[40px] grid grid-cols-6 grid-rows-[fit,fit,fit] gap-[16px] [&>*:nth-child(2)]:col-span-3 [&>*:nth-child(6)]:col-span-4">
             {skills.map(skillCategory => (
-              <div key={skillCategory.category} className="col-span-2 first:col-span-3 flex flex-col border-2 border-secondary rounded-xl">
-                <h3 className="w-full h-min pr-[10px] text-end text-[12px] rounded-t-lg font-[600] uppercase text-light bg-secondary">
+              <div key={skillCategory.category} className="col-span-2 first:col-span-3 flex flex-col border-2 border-primary rounded-xl hover:scale-105 ease-in-out duration-300">
+                <h3 className="w-full h-min pr-[12px] text-end text-[12px] rounded-t-lg font-[600] uppercase text-light bg-primary">
                   {skillCategory.category}
                 </h3>
                 <div className="w-full h-min flex flex-wrap gap-[5px] p-[6px]">
                   {skillCategory.list.map(skill => (
-                    <div key={skill.name} className="w-min h-min flex items-center px-[5px] py-[6px] bg-secondary rounded-md">
+                    <div key={skill.name} className="w-min h-min flex items-center px-[5px] py-[6px] bg-secondary/[.2] border-[2px] border-secondary rounded-md">
                       <div className="mx-1">
                         {skill.icon}
                       </div>
-                      <div className="block whitespace-nowrap text-[16px] font-[400] text-light/[0.8]">
+                      <div className="block whitespace-nowrap text-[14px] font-[400] text-dark">
                         {skill.name}
                       </div>
                     </div>
