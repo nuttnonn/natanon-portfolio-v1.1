@@ -58,7 +58,7 @@ const NavBar = () => {
             <span className={`bg-light block transition-all duration-300 ease-out h-[3px] w-6 rounded-md ${isOpen ? '-rotate-45 -translate-y-[5px]' : 'translate-y-0.5'}`}></span>
           </button>
         </div>
-        <div className={`w-full max-w-[900px] h-min flex-col justify-between items-center py-[32px] rounded-b-[35px] ${isOpen ? 'flex' : 'hidden'} overflow-hidden`}>
+        <div className={`w-full max-w-[900px] h-min flex-col justify-between items-center py-[32px] ml-[16px] rounded-b-[35px] ${isOpen ? 'flex' : 'hidden'} overflow-hidden`}>
           <div className="flex flex-col justify-center items-start gap-[20px] mb-[24px] text-[12px] font-[600] tracking-[2px] uppercase">
             <CustomMobileLink href="/#home" title="/Home" onClick={handleClick} />
             <CustomMobileLink href="/#about" title="/About" onClick={handleClick} />
