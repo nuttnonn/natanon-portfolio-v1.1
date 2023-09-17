@@ -20,6 +20,12 @@ module.exports = {
         light: "#FFF7E6",
         dark: "#000000",
       },
+      boxShadow: {
+        'profilePicture': '28px 20px #000000',
+        'profilePictureXl': '24px 16px #000000',
+        'profilePictureLg': '20px 12px #000000',
+        'profilePictureSm': '16px 10px #000000',
+      },
     },
     screens: {
       "2xl": {max: "1536px"},

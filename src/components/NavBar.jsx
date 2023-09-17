@@ -58,7 +58,7 @@ const NavBar = () => {
             <span className={`bg-light block transition-all duration-300 ease-out h-[3px] w-6 rounded-md ${isOpen ? '-rotate-45 -translate-y-[5px]' : 'translate-y-0.5'}`}></span>
           </button>
         </div>
-        <div className={`w-full max-w-[900px] h-min flex-col justify-between items-center py-[32px] rounded-b-[35px] ${isOpen ? 'flex' : 'hidden'} overflow-hidden`}>
+        <div className={`w-full max-w-[900px] h-min flex-col justify-between items-center py-[32px] ml-[16px] rounded-b-[35px] ${isOpen ? 'flex' : 'hidden'} overflow-hidden`}>
           <div className="flex flex-col justify-center items-start gap-[20px] mb-[24px] text-[12px] font-[600] tracking-[2px] uppercase">
             <CustomMobileLink href="/#home" title="/Home" onClick={handleClick} />
             <CustomMobileLink href="/#about" title="/About" onClick={handleClick} />
@@ -71,18 +71,6 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      {/*<div className="w-[90%] max-w-[900px] h-min flex flex-col justify-between items-center py-[32px] bg-dark/[.55] shadow-lg backdrop-blur-md">*/}
-      {/*  <div className="flex flex-col justify-center items-start gap-[20px] mb-[24px] text-[12px] font-[600] tracking-[2px] uppercase">*/}
-      {/*    <CustomLink href="/#home" title="/Home" />*/}
-      {/*    <CustomLink href="/#about" title="/About" />*/}
-      {/*    <CustomLink href="/#skills" title="/Skills" />*/}
-      {/*    <CustomLink href="/#projects" title="/Projects" />*/}
-      {/*    <CustomLink href="/natanon_trangratanajit_resume.pdf" target="_blank" title="↓resume" />*/}
-      {/*  </div>*/}
-      {/*  <div className="w-min h-full flex flex-col justify-center items-center gap-[20px] -translate-x-[6px]">*/}
-      {/*    <Social />*/}
-      {/*  </div>*/}
-      {/*</div>*/}
     </div>
   )
 }

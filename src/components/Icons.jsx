@@ -175,7 +175,7 @@ export const TailwindIcon = ({className, ...rest}) => (
 )
 
 export const FramerMotionIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-framer-motion" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="#EF616D" fill="none" strokeLinecap="round" strokeLinejoin="round">
+  <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-framer-motion" width="24" height="24" viewBox="2 0 24 24" strokeWidth="2" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
     <path d="M12 12l-8 -8v16l16 -16v16l-4 -4" />
     <path d="M20 12l-8 8l-4 -4" />
@@ -188,7 +188,7 @@ export const ROSIcon = ({className, ...rest}) => (
     xmlSpace="preserve"
     width="1em"
     height="1em"
-    viewBox="0 0 72 72"
+    viewBox="0 -8 80 80"
     {...rest}
     className={`${className}`}  >
     <path
