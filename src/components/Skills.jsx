@@ -104,7 +104,7 @@ const Skills = () => {
             Welcome to the intersection of my journey. This section offers a glimpse into the <strong className="font-[500]">merging</strong> of my background in <strong className="font-[500]">robotics</strong> engineering and my fresh exploration in <strong className="font-[500]">web development</strong>. The <strong className="font-[500]">skill</strong> showcases ahead present a blend of past expertise and new endeavors. As you explore further, you will see how my experiences shape a <strong className="font-[500]">diverse</strong> portfolio. It is a reflection of my <strong className="font-[500]">commitment to growth</strong> and a showcase of the skills that define my path. Join me on this visual journey where each skill adds to the story of my <strong className="font-[500]">progression</strong>.
           </div>
 
-          <div className="w-[85%] h-min mt-[40px] grid grid-cols-6 grid-rows-[fit,fit,fit] gap-[16px] [&>*:nth-child(2)]:col-span-3 [&>*:nth-child(6)]:col-span-4">
+          <div className="w-[90%] h-min mt-[40px] grid grid-cols-6 grid-rows-[fit,fit,fit] gap-[16px] [&>*:nth-child(2)]:col-span-3 [&>*:nth-child(6)]:col-span-4">
             {skills.map(skillCategory => (
               <div key={skillCategory.category} className="col-span-2 first:col-span-3 flex flex-col border-2 border-primary rounded-xl hover:scale-105 ease-in-out duration-300">
                 <h3 className="w-full h-min pr-[12px] text-end text-[12px] rounded-t-lg font-[600] uppercase text-light bg-primary">

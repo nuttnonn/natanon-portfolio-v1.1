@@ -25,7 +25,7 @@ const Logo = () => {
       target="_blank"
       onHoverStart={handleHover}
       onHoverEnd={handleHover}
-      className="w-[40px] h-[40px] mr-[8px] flex justify-center items-center border-[1px] border-gray rounded-[25px] hover:w-[100px] ease-in-out duration-300"
+      className="w-[40px] h-[40px] mr-[8px] flex justify-center items-center border-[1px] border-light rounded-[20px] hover:w-[100px] ease-in-out duration-300"
       whileTap={{scale:0.8, backgroundColor:"#616173"}}
     >
       <div className={`text-center text-light overflow-hidden ease-in-out duration-300 ${textStyles}`}>{text}</div>

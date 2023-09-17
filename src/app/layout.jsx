@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html className="scroll-smooth" lang="en">
-      <body className={`${montserrat.variable} font-mont text-light bg-primary w-full min-h-screen`}>
+      <body className={`${montserrat.variable} font-mont text-light bg-primary w-full h-min min-h-screen`}>
         <NavBar />
         {children}
       </body>
