@@ -32,7 +32,7 @@ export default function Home() {
           {homeContent.map(content =>(
             <motion.div
               key={content.description}
-              className="w-full h-min flex text-[16px] mt-[36px] text-start text-gray font-[300] xl:mt-[20px] md:mt-[16px] md:leading-[20px] sm:text-justify"
+              className="w-full h-min flex text-[16px] mt-[36px] text-start text-gray font-[300] xl:mt-[20px] md:mt-[16px] md:leading-[20px] sm:text-center"
               initial={{opacity:0, y:-10}}
               animate={{opacity:1, y:0, transition:{duration:0.6, delay:0.9, ease:[0, 0.71, 0.2, 1.01]}}}>
               {content.description}

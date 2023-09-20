@@ -39,7 +39,7 @@ const About = () => {
           </div>
           <div className="w-[40%] h-min flex flex-col justify-center items-start sm:w-full sm:justify-start sm:items-center">
             <h1 className="w-min h-min text-[44px] font-[900] uppercase">about</h1>
-            <h2 className="w-[90%] h-min flex justify-start items-center text-dark text-[16px] font-[700] mt-[8px] sm:text-justify">I&apos;m&nbsp;a front-end developer based in Bangkok, Thailand. I love to create things. And now I have a passion for bringing ideas to life through code.</h2>
+            <h2 className="w-[90%] h-min flex justify-start items-center text-dark text-[16px] font-[700] mt-[8px] sm:text-center">I&apos;m&nbsp;a front-end developer based in Bangkok, Thailand. I love to create things. And now I have a passion for bringing ideas to life through code.</h2>
           </div>
         </motion.div>
 
@@ -56,7 +56,7 @@ const About = () => {
               <div className="w-full h-min text-start text-[18px] text-dark font-[600] capitalize sm:mt-[12px]">
                 {content.subTitle}
               </div>
-              <span className="col-start-2 w-full h-min mt-[8px] text-[16px] text-dark text-start font-[300] leading-relaxed sm:mt-[8px] sm:text-justify">
+              <span className="col-start-2 w-full h-min mt-[8px] text-[16px] text-dark text-start font-[300] leading-relaxed sm:mt-[8px] sm:text-start">
                 {content.description}
               </span>
             </motion.div>

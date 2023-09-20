@@ -99,14 +99,14 @@ const Skills = () => {
           className="w-full h-min mt-[96px] flex flex-col items-center lg:mt-[68px] sm:mt-[40px]"
           initial={{opacity:0, y:-150}}
           animate={{opacity:1, y:0, transition:{duration:0.6, delay:0.48, ease:[0, 0.71, 0.2, 1.01]}}}>
-          <div className="w-[80%] h-min text-[18px] text-dark text-start font-[300] indent-[48px] leading-relaxed sm:w-[95%] sm:text-justify">
+          <div className="w-[80%] h-min text-[18px] text-dark text-start font-[300] indent-[48px] leading-relaxed sm:w-[95%] sm:text-start">
             Welcome to the intersection of my journey. This section offers a glimpse into the <strong className="font-[500]">merging</strong> of my background in <strong className="font-[500]">robotics</strong> engineering and my fresh exploration in <strong className="font-[500]">web development</strong>. The <strong className="font-[500]">skill</strong> showcases ahead present a blend of past expertise and new endeavors. As you explore further, you will see how my experiences shape a <strong className="font-[500]">diverse</strong> portfolio. It is a reflection of my <strong className="font-[500]">commitment to growth</strong> and a showcase of the skills that define my path. Join me on this visual journey where each skill adds to the story of my <strong className="font-[500]">progression</strong>.
           </div>
 
           <div className="w-[90%] h-min mt-[40px] grid grid-cols-6 grid-rows-[fit,fit,fit] gap-[16px] [&>*:nth-child(2)]:col-span-3 [&>*:nth-child(6)]:col-span-4 md:w-full md:gap-[8px] sm:flex sm:flex-col sm:gap-[12px]">
             {skills.map(skillCategory => (
-              <div key={skillCategory.category} className="col-span-2 first:col-span-3 flex flex-col border-2 border-[#170841]/[.6] rounded-[6px] hover:scale-105 ease-in-out duration-300">
-                <h3 className="w-full h-min pr-[12px] text-end text-[12px] rounded-t-[3px] font-[600] uppercase text-dark bg-secondary/[.3] border-b-2 border-dark sm:text-start sm:pl-[12px]">
+              <div key={skillCategory.category} className="col-span-2 first:col-span-3 flex flex-col border-2 border-dark/[.5] rounded-[6px] hover:scale-105 ease-in-out duration-300">
+                <h3 className="w-full h-min pr-[12px] text-end text-[12px] rounded-t-[3px] font-[600] uppercase text-dark bg-secondary/[.3] border-b-2 border-dark/[.5] sm:text-start sm:pl-[12px]">
                   {skillCategory.category}
                 </h3>
                 <div className="w-full h-min flex flex-wrap gap-[5px] p-[6px]">
