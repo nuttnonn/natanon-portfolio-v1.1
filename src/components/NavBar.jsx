@@ -1,12 +1,11 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Logo from './Logo'
 import { usePathname } from 'next/navigation'
 import Resume from './Resume'
 import Social from './Social'
-import useEventListener from 'use-event-listener/index'
 
 const CustomLink = ({href, title, className=""}) => {
   const pathname = usePathname()
@@ -26,21 +25,25 @@ const CustomMobileLink = ({href, target, title, className="", onClick}) => {
         {title}
         <div className={`w-full h-0 inline-block bg-secondary absolute -left-[1px] top-[18px] group-hover:h-[4px] transition-all ease duration-200 ${pathname === href ? 'w-full' : 'w-0'}`} />
       </Link>
-      <div className="w-[90%] h-[1px] mt-[6px] bg-light/[.2]" />
+      <div className="w-full h-[1px] mt-[6px] bg-light/[.2]" />
     </div>
   )
 }
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const handleScroll = () => {
-    // Close the navigation bar when scrolling occurs
-    setIsOpen(false);
-  };
-  useEventListener('scroll', handleScroll);
   const handleClick = () => {
     setIsOpen(!isOpen)
   }
+  const handleScroll = () => {
+    setIsOpen(false);
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div className="w-full h-min flex flex-col justify-center items-center fixed top-0">
@@ -68,7 +71,7 @@ const NavBar = () => {
           </button>
         </div>
         <div className={`w-full max-w-[900px] h-min flex-col justify-between items-start pt-[32px] rounded-b-[35px] ${isOpen ? 'flex' : 'hidden'} overflow-hidden`}>
-          <div className="w-full h-min flex flex-col justify-center items-start gap-[20px] pl-[56px] text-[12px] font-[600] tracking-[2px] uppercase">
+          <div className="w-full h-min flex flex-col justify-center items-start gap-[20px] px-[56px] text-[12px] font-[600] tracking-[2px] uppercase">
             <CustomMobileLink href="/#home" title="/Home" onClick={handleClick} />
             <CustomMobileLink href="/#about" title="/About" onClick={handleClick} />
             <CustomMobileLink href="/#skills" title="/Skills" onClick={handleClick} />
