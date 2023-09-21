@@ -29,11 +29,7 @@ const About = () => {
   return (
     <div id="about" className="w-full h-min min-h-screen flex justify-center items-start bg-light text-primary">
       <div className="w-[90%] max-w-[1000px] h-min mt-[160px] flex flex-col justify-start items-center sm:mt-[92px]">
-        <motion.div
-          className="w-full h-min flex justify-between items-center sm:flex-col-reverse"
-          initial={{opacity:0, y:-200}}
-          animate={{opacity:1, y:0, transition:{duration:0.6, delay:0.5, ease:[0, 0.71, 0.2, 1.01]}}}
-        >
+        <div className="w-full h-min flex justify-between items-center sm:flex-col-reverse">
           <div className="w-[50%] h-auto self-end md:self-center sm:w-[80%] sm:mt-[36px]">
             <Image src={workSpace} alt="workSpace-picture" />
           </div>
@@ -41,15 +37,17 @@ const About = () => {
             <h1 className="w-min h-min text-[44px] font-[900] uppercase">about</h1>
             <h2 className="w-[90%] h-min flex justify-start items-center text-dark text-[16px] font-[700] mt-[8px] sm:text-center">I&apos;m&nbsp;a front-end developer based in Bangkok, Thailand. I love to create things. And now I have a passion for bringing ideas to life through code.</h2>
           </div>
-        </motion.div>
+        </div>
 
         <div className="w-full h-min flex flex-col justify-center items-center gap-[44px] mt-[120px] sm:mt-[40px]">
           {aboutContent.map(content =>(
             <motion.div
               key={content.title}
               className="w-[80%] h-min grid grid-cols-[20%,auto] justify-items-start items-start lg:w-[85%] lg:grid-cols-[25%,auto] md:w-[95%] sm:flex sm:flex-col"
-              initial={{opacity:0, y:-150}}
-              animate={{opacity:1, y:0, transition:{duration:0.6, delay:0.48, ease:[0, 0.71, 0.2, 1.01]}}}>
+              initial={{opacity:0, y:100}}
+              whileInView={{opacity:1, y:0, transition:{duration:0.6, delay:0.3, ease:[0, 0.71, 0.2, 1.01]}}}
+              viewport={{once: true}}
+            >
               <div className="w-full flex justify-start items-center leading-[27px] text-primary text-[14px] font-[600] uppercase">
                 {content.title}
               </div>

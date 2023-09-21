@@ -20,10 +20,13 @@ const CustomLink = ({href, title, className=""}) => {
 const CustomMobileLink = ({href, target, title, className="", onClick}) => {
   const pathname = usePathname()
   return(
-    <Link href={href} target={target} className={`${className} relative group`} onClick={onClick}>
-      {title}
-      <div className={`w-full h-0 inline-block bg-secondary absolute -left-[1px] top-[18px] group-hover:h-[4px] transition-all ease duration-200 ${pathname === href ? 'w-full' : 'w-0'}`} />
-    </Link>
+    <div className="w-full h-min flex flex-col justify-start items-start">
+      <Link href={href} target={target} className={`${className} relative group`} onClick={onClick}>
+        {title}
+        <div className={`w-full h-0 inline-block bg-secondary absolute -left-[1px] top-[18px] group-hover:h-[4px] transition-all ease duration-200 ${pathname === href ? 'w-full' : 'w-0'}`} />
+      </Link>
+      <div className="w-[90%] h-[1px] mt-[6px] bg-light/[.2]" />
+    </div>
   )
 }
 
@@ -35,7 +38,7 @@ const NavBar = () => {
 
   return (
     <div className="w-full h-min flex flex-col justify-center items-center fixed top-0">
-      <div className={`w-[90%] max-w-[900px] min-h-[56px] flex flex-col justify-start items-center mt-[20px] rounded-[28px] hover:bg-dark/[.55] hover:shadow-lg backdrop-blur-md ${isOpen ? 'h-[330px] bg-dark/[.55]' : 'h-[56px] bg-primary/[.2]'} transition-all ease duration-300`}>
+      <div className={`w-[90%] max-w-[900px] min-h-[56px] flex flex-col justify-start items-center mt-[20px] rounded-[28px] hover:bg-dark/[.55] hover:shadow-lg backdrop-blur-md ${isOpen ? 'h-[330px] bg-dark/[.55]' : 'h-[56px] bg-primary/[.2]'} transition-all ease duration-300 sm:backdrop-blur-[8px]`}>
         <div className="w-full h-min flex justify-between items-center translate-y-[8px]">
           <div className="w-min h-full flex justify-between items-center">
             <Logo />
@@ -58,19 +61,20 @@ const NavBar = () => {
             <span className={`bg-light block transition-all duration-300 ease-out h-[3px] w-6 rounded-md ${isOpen ? '-rotate-45 -translate-y-[5px]' : 'translate-y-0.5'}`}></span>
           </button>
         </div>
-        <div className={`w-full max-w-[900px] h-min flex-col justify-between items-center py-[32px] ml-[16px] rounded-b-[35px] ${isOpen ? 'flex' : 'hidden'} overflow-hidden`}>
-          <div className="flex flex-col justify-center items-start gap-[20px] mb-[24px] text-[12px] font-[600] tracking-[2px] uppercase">
+        <div className={`w-full max-w-[900px] h-min flex-col justify-between items-start pt-[32px] rounded-b-[35px] ${isOpen ? 'flex' : 'hidden'} overflow-hidden`}>
+          <div className="w-full h-min flex flex-col justify-center items-start gap-[20px] pl-[56px] text-[12px] font-[600] tracking-[2px] uppercase">
             <CustomMobileLink href="/#home" title="/Home" onClick={handleClick} />
             <CustomMobileLink href="/#about" title="/About" onClick={handleClick} />
             <CustomMobileLink href="/#skills" title="/Skills" onClick={handleClick} />
             <CustomMobileLink href="/#projects" title="/Projects" onClick={handleClick} />
             <CustomMobileLink href="/natanon_trangratanajit_resume.pdf" target="_blank" title="↓resume" onClick={handleClick} />
           </div>
-          <div className="w-min h-full flex flex-col justify-center items-center gap-[20px] -translate-x-[6px]" onClick={handleClick}>
+          <div className="w-min h-full self-center flex flex-col justify-center items-center gap-[20px] mt-[10px]" onClick={handleClick}>
             <Social />
           </div>
         </div>
       </div>
+      <div className={`w-full h-[calc(100dvh-76px)] ${isOpen ? 'flex' : 'hidden'}`} onClick={handleClick} />
     </div>
   )
 }
