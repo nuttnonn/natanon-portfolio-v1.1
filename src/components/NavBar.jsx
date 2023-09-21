@@ -6,6 +6,7 @@ import Logo from './Logo'
 import { usePathname } from 'next/navigation'
 import Resume from './Resume'
 import Social from './Social'
+import useEventListener from 'use-event-listener/index'
 
 const CustomLink = ({href, title, className=""}) => {
   const pathname = usePathname()
@@ -32,6 +33,11 @@ const CustomMobileLink = ({href, target, title, className="", onClick}) => {
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const handleScroll = () => {
+    // Close the navigation bar when scrolling occurs
+    setIsOpen(false);
+  };
+  useEventListener('scroll', handleScroll);
   const handleClick = () => {
     setIsOpen(!isOpen)
   }
