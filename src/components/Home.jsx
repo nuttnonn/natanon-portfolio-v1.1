@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import profilePicture from "../../public/profilePicture.JPG"
 
-// export const runtime = 'edge';
+export const runtime = 'edge';
 
 const homeContent = [
   {
@@ -15,18 +15,6 @@ const homeContent = [
 ]
 
 export default function Home() {
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const res = await fetch("https://api.spotify.com/v1/me/player/recently-played", {headers: {Authorization: "Bearer BQDOj55Zc80zEgvtXigTXbYJ-7vEyZlz8dheQyo8SxbnB9eCeG-XoP9JtTnRH3mKpYRvxk8TZj8th9xNtXXbA4bEXCVTUVSyYaQdI3gj8PErolOoN4XyUcANbmTz1WeXZjeB_ZtZ8RY29oUTJaaP-Slkr1esdOyEyJihRnc4QzrB7q0SLUZQbIlmIKAu8W2M6r_I9u3lBEN7QQsV_NjJ9mpZ"}})
-  //     const data = await res.json()
-  //     setSpotify(data)
-  //     // console.log(data)
-  //   }
-  //   fetchData()
-  // }, [])
-  // const [spotify, setSpotify] = useState()
-  // console.log(spotify)
-
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch("http://localhost:3000/api/recently-played", )
