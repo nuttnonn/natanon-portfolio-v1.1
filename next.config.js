@@ -1,10 +1,10 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  modularizeImports: {
-    '@mui/icons-material/?(((\\w*)?/?)*)': {
-      transform: '@mui/icons-material/{{ matches.[1] }}/{{member}}'
-    }
-  },
+  reactStrictMode: true,
+  env: {
+    SPOTIFY_REFRESH_TOKEN: process.env.SPOTIFY_REFRESH_TOKEN,
+    SPOTIFY_CLIENT_SECRET: process.env.SPOTIFY_CLIENT_SECRET,
+    SPOTIFY_CLIENT_ID: process.env.SPOTIFY_CLIENT_ID,
+  }
 }
 
 module.exports = nextConfig

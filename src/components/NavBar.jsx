@@ -57,7 +57,7 @@ const NavBar = () => {
               <CustomLink href="/#home" title="/Home" />
               <CustomLink href="/#about" title="/About" />
               <CustomLink href="/#skills" title="/Skills" />
-              <CustomLink href="/#projects" title="/Projects" />
+              <CustomLink href="/projects" title="/Projects" />
             </div>
             <div className="w-min h-full flex justify-center items-center gap-[20px]">
               <Social />
@@ -75,7 +75,7 @@ const NavBar = () => {
             <CustomMobileLink href="/#home" title="/Home" onClick={handleClick} />
             <CustomMobileLink href="/#about" title="/About" onClick={handleClick} />
             <CustomMobileLink href="/#skills" title="/Skills" onClick={handleClick} />
-            <CustomMobileLink href="/#projects" title="/Projects" onClick={handleClick} />
+            <CustomMobileLink href="/projects" title="/Projects" onClick={handleClick} />
             <CustomMobileLink href="/natanon_trangratanajit_resume.pdf" target="_blank" title="↓resume" onClick={handleClick} />
           </div>
           <div className="w-min h-full self-center flex flex-col justify-center items-center gap-[20px] mt-[10px]" onClick={handleClick}>
