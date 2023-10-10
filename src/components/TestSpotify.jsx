@@ -1,5 +1,7 @@
 import { getAccessToken } from '../app/lib/spotify'
 
+export const runtime = 'edge';
+
 const TestSpotify = async () => {
   const fetchData = async () => {
     const { access_token } = await getAccessToken();
