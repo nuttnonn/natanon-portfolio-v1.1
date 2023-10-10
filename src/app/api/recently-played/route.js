@@ -1,6 +1,6 @@
 import { recentlyPlayed } from '../../lib/spotify'
 
-export default async function handler(req, res) {
+export async function GET() {
   const response = await recentlyPlayed();
   const { items } = await response.json();
 

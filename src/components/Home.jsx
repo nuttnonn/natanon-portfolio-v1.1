@@ -5,6 +5,7 @@ import {motion} from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import profilePicture from "../../public/profilePicture.JPG"
+// import Spotify from '../components/Spotify'
 
 export const runtime = 'edge';
 
@@ -17,7 +18,7 @@ const homeContent = [
 export default function Home() {
   // useEffect(() => {
   //   const fetchData = async () => {
-  //     const res = await fetch("http://localhost:3000/api/recently-played", )
+  //     const res = await fetch(`/api/recently-played`, )
   //     const data = await res.json()
   //     setSpotify(data)
   //   }
@@ -25,6 +26,9 @@ export default function Home() {
   // }, [])
   // const [spotify, setSpotify] = useState()
   // console.log(spotify)
+
+  // const spotifyData =  Spotify()
+  // console.log(spotifyData)
 
   return (
     <div id="home" className="w-full h-min min-h-[calc(100dvh-76px)] flex justify-center items-center mb-[76px] pt-[76px] sm:items-start">
@@ -82,8 +86,7 @@ export default function Home() {
         {/*  <Image src={profilePicture} alt="profile-picture" className="w-full" />*/}
         {/*  {spotify ? (*/}
         {/*    <div className="text-dark">*/}
-        {/*      Spotify Data: {JSON.stringify(spotify)}*/}
-        {/*      {spotify.recently.trackName}*/}
+        {/*      /!*{spotifyData.recently.trackName}*!/*/}
         {/*    </div>*/}
         {/*  ) : (*/}
         {/*    <div>Loading Spotify data...</div>*/}
