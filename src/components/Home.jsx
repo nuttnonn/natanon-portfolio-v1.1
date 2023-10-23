@@ -68,13 +68,6 @@ export default function Home() {
             </Link>
           </motion.div>
         </div>
-        {/*<motion.div*/}
-        {/*  className="w-[30%] h-min border-[16px] border-b-[60px] border-light shadow-profilePicture xl:border-[12px] xl:border-b-[48px] xl:shadow-profilePictureXL lg:border-[8px] lg:border-b-[36px] lg:shadow-profilePictureLg sm:w-[45%] sm:mt-[28px] sm:border-[6px] sm:border-b-[24px] sm:shadow-profilePictureSm"*/}
-        {/*  initial={{opacity:0, x:-150}}*/}
-        {/*  animate={{opacity:1, x:0, transition:{duration:0.6, delay:0.5, ease:[0, 0.71, 0.2, 1.01]}}}*/}
-        {/*>*/}
-        {/*  <Image src={profilePicture} alt="profile-picture" className="w-full" />*/}
-        {/*</motion.div>*/}
         <motion.div
           className="w-[30%] h-min flex bg-light flex-col border-[16px] border-light shadow-profilePicture xl:border-[12px] xl:shadow-profilePictureXL lg:border-[8px] lg:shadow-profilePictureLg sm:w-[45%] sm:mt-[28px] sm:border-[6px] sm:shadow-profilePictureSm"
           initial={{opacity:0, x:-150}}
