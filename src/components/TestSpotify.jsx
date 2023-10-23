@@ -1,6 +1,6 @@
 import { getAccessToken } from '../app/lib/spotify'
 
-export const runtime = 'edge';
+// export const runtime = 'edge';
 
 const TestSpotify = async () => {
   const fetchData = async () => {
@@ -10,17 +10,15 @@ const TestSpotify = async () => {
         Authorization: `Bearer ${access_token}`,
       },
     })
-    const data = await res.json()
-    return data
+    return await res.json()
   }
 
-  const data = await fetchData()
-  console.log(data)
+  const recentlyPlayed = await fetchData()
+  console.log(recentlyPlayed.items)
 
   return (
     <div>
-      Testing spotify api: {data.items[0].track.name}
-
+      Testing spotify api: {recentlyPlayed.items[0].track.name}
     </div>
   )
 }

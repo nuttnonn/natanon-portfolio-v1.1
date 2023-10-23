@@ -37,3 +37,13 @@ export const recentlyPlayed = async () => {
     },
   });
 };
+
+export const currentlyPlaying = async () => {
+  const { access_token } = await getAccessToken();
+
+  return fetch("https://api.spotify.com/v1/me/player/currently-playing", {
+    headers: {
+      Authorization: `Bearer ${access_token}`,
+    },
+  });
+};
