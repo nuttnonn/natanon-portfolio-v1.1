@@ -1,4 +1,4 @@
-export const revalidate = 120
+export const revalidate = 80
 export const getAccessToken = async () => {
   const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
 
