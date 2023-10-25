@@ -1,5 +1,5 @@
 "use client"
-export const revalidate = 20
+export const revalidate = 600
 
 import React, { useEffect, useState } from 'react'
 import {motion} from 'framer-motion'

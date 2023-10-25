@@ -1,7 +1,7 @@
 import { recentlyPlayed } from '../../lib/spotify'
 
 // export const runtime = 'edge';
-export const revalidate = 20
+export const revalidate = 600
 
 export async function GET() {
   const response = await recentlyPlayed();
