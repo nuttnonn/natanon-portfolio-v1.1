@@ -81,7 +81,7 @@ export default function Home() {
           </motion.div>
         </div>
         <motion.div
-          className="w-[30%] h-min flex flex-col bg-light border-[16px] border-light shadow-profilePicture xl:border-[12px] xl:shadow-profilePictureXL lg:border-[8px] lg:shadow-profilePictureLg sm:w-[45%] sm:mt-[28px] sm:border-[6px] sm:shadow-profilePictureSm"
+          className="w-[30%] h-min flex flex-col bg-light border-[16px] border-light shadow-profilePicture xl:border-[12px] xl:shadow-profilePictureXL lg:border-[8px] lg:shadow-profilePictureLg sm:w-[60%] sm:mt-[28px] sm:border-[6px] sm:shadow-profilePictureSm"
           initial={{opacity:0, x:-150}}
           animate={{opacity:1, x:0, transition:{duration:0.6, delay:0.5, ease:[0, 0.71, 0.2, 1.01]}}}
         >
