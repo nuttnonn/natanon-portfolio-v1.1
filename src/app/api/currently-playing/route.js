@@ -1,7 +1,5 @@
 import { currentlyPlaying } from '../../lib/spotify'
 
-// export const runtime = 'edge';
-
 export async function GET() {
   const response = await currentlyPlaying();
   const { items } = await response.json();

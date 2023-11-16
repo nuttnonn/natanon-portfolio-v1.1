@@ -12,7 +12,7 @@ const TestSpotify = async () => {
   }
 
   const recentlyPlayed = await fetchData()
-  console.log(recentlyPlayed.items)
+  // console.log(recentlyPlayed.items)
 
   return (
     <div>

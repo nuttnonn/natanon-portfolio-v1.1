@@ -1,7 +1,6 @@
 import { recentlyPlayed } from '../../lib/spotify'
 
-// export const runtime = 'edge';
-export const revalidate = 600
+export const revalidate = 10
 
 export async function GET() {
   const response = await recentlyPlayed();
@@ -11,6 +10,7 @@ export async function GET() {
     trackName: items[0].track.name,
     trackUrl: items[0].track.external_urls.spotify,
     artist: items[0].track.artists.map((_artist) => _artist.name).join(', '),
+    artistUrl: items[0].track.artists[0].external_urls.spotify,
     coverImage: items[0].track.album.images[2],
   }
 
