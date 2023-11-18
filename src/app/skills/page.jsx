@@ -3,8 +3,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import * as Icons from './Icons'
-import developerPicture from '../../public/developer.svg'
+import * as Icons from '../../components/Icons'
+import developerPicture from '../../../public/developer.svg'
 
 const IconClassName = "w-[20px] h-auto fill-dark"
 const skills = [

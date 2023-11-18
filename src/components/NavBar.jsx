@@ -10,9 +10,8 @@ import Social from './Social'
 const CustomLink = ({href, title, className=""}) => {
   const pathname = usePathname()
   return(
-    <Link href={href} className={`${className} relative group`}>
+    <Link href={href} className={`${className} px-[6px] py-[4px] rounded-[12px] hover:bg-primary/[.4] transition-all ease duration-300 ${pathname === href ? 'bg-dark/[.4] shadow-lg' : 'bg-transparent'}`}>
       {title}
-      <div className={`w-full h-0 inline-block bg-secondary absolute -left-[1px] top-[18px] group-hover:h-[4px] transition-all ease duration-200 ${pathname === href ? 'w-full' : 'w-0'}`} />
     </Link>
   )
 }
@@ -21,9 +20,8 @@ const CustomMobileLink = ({href, target, title, className="", onClick}) => {
   const pathname = usePathname()
   return(
     <div className="w-full h-min flex flex-col justify-start items-start">
-      <Link href={href} target={target} className={`${className} relative group`} onClick={onClick}>
+      <Link href={href} target={target} className={`${className} px-[6px] py-[4px] rounded-[12px] hover:bg-primary/[.4] transition-all ease duration-300 ${pathname === href ? 'bg-dark/[.4] shadow-lg' : 'bg-transparent'}`} onClick={onClick}>
         {title}
-        <div className={`w-full h-0 inline-block bg-secondary absolute -left-[1px] top-[18px] group-hover:h-[4px] transition-all ease duration-200 ${pathname === href ? 'w-full' : 'w-0'}`} />
       </Link>
       <div className="w-full h-[1px] mt-[6px] bg-light/[.2]" />
     </div>
@@ -54,10 +52,10 @@ const NavBar = () => {
           </div>
           <div className="w-full h-full flex justify-between items-center md:hidden">
             <div className="flex items-center ml-[20px] space-x-[20px] text-[12px] font-[600] tracking-[2px] uppercase">
-              <CustomLink href="/#home" title="/Home" />
-              <CustomLink href="/#about" title="/About" />
-              <CustomLink href="/#skills" title="/Skills" />
-              <CustomLink href="/#projects" title="/Projects" />
+              <CustomLink href="/" title="/Home" />
+              <CustomLink href="/about" title="/About" />
+              <CustomLink href="/skills" title="/Skills" />
+              <CustomLink href="/projects" title="/Projects" />
             </div>
             <div className="w-min h-full flex justify-center items-center gap-[20px]">
               <Social />
@@ -72,10 +70,10 @@ const NavBar = () => {
         </div>
         <div className={`w-full max-w-[900px] h-min flex-col justify-between items-start pt-[32px] rounded-b-[35px] ${isOpen ? 'flex' : 'hidden'} overflow-hidden`}>
           <div className="w-full h-min flex flex-col justify-center items-start gap-[20px] px-[56px] text-[12px] font-[600] tracking-[2px] uppercase">
-            <CustomMobileLink href="/#home" title="/Home" onClick={handleClick} />
-            <CustomMobileLink href="/#about" title="/About" onClick={handleClick} />
-            <CustomMobileLink href="/#skills" title="/Skills" onClick={handleClick} />
-            <CustomMobileLink href="/#projects" title="/Projects" onClick={handleClick} />
+            <CustomMobileLink href="/" title="/Home" onClick={handleClick} />
+            <CustomMobileLink href="/about" title="/About" onClick={handleClick} />
+            <CustomMobileLink href="/skills" title="/Skills" onClick={handleClick} />
+            <CustomMobileLink href="/projects" title="/Projects" onClick={handleClick} />
             <CustomMobileLink href="/natanon_trangratanajit_resume.pdf" target="_blank" title="↓resume" onClick={handleClick} />
           </div>
           <div className="w-min h-full self-center flex flex-col justify-center items-center gap-[20px] mt-[10px]" onClick={handleClick}>

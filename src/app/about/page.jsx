@@ -2,7 +2,7 @@
 
 import React from 'react'
 import {motion} from 'framer-motion'
-import workSpace from '../../public/workspace.svg'
+import workSpace from '../../../public/workspace.svg'
 import Image from 'next/image'
 
 export const runtime = 'edge';
@@ -39,7 +39,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="w-full h-min flex flex-col justify-center items-center gap-[44px] mt-[120px] sm:mt-[40px]">
+        <div className="w-full h-min flex flex-col justify-center items-center gap-[44px] mt-[120px] mb-[140px] sm:mt-[40px]">
           {aboutContent.map(content =>(
             <motion.div
               key={content.title}
