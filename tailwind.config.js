@@ -21,10 +21,10 @@ module.exports = {
         dark: "#000000",
       },
       boxShadow: {
-        'profilePicture': '28px 20px #000000',
-        'profilePictureXl': '24px 16px #000000',
-        'profilePictureLg': '20px 12px #000000',
-        'profilePictureSm': '16px 10px #000000',
+        'profilePicture': '28px 20px rgba(0, 0, 0, 0.65)',
+        'profilePictureXl': '24px 16px rgba(0, 0, 0, 0.65)',
+        'profilePictureLg': '20px 12px rgba(0, 0, 0, 0.65)',
+        'profilePictureSm': '16px 10px rgba(0, 0, 0, 0.65)',
       },
     },
     screens: {
