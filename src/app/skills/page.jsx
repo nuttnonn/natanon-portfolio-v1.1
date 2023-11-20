@@ -34,6 +34,7 @@ const skills = [
     list: [
       {name: 'ReactJS', icon: <Icons.ReactIcon className={`${IconClassName}`} />},
       {name: 'NextJS', icon: <Icons.NextJSIcon className={`${IconClassName}`} />},
+      {name: 'REST API', icon: <Icons.RestApiIcon className={`${IconClassName}`} />},
       {name: 'TailwindCSS', icon: <Icons.TailwindIcon className={`${IconClassName}`} />},
       {name: 'Framer Motion', icon: <Icons.FramerMotionIcon className={`${IconClassName}`} />},
       {name: 'ROS', icon: <Icons.ROSIcon className={`${IconClassName}`} />},
@@ -81,7 +82,11 @@ const Skills = () => {
   return (
     <div id="skills" className="w-full h-min min-h-screen flex justify-center items-center bg-light text-primary">
       <div className="w-[90%] max-w-[1000px] h-min my-[160px] flex flex-col justify-start items-center md:my-[120px] sm:my-[98px]">
-        <div className="w-[90%] h-min flex justify-between items-center sm:flex-col">
+        <motion.div
+          className="w-[90%] h-min flex justify-between items-center sm:flex-col"
+          initial={{opacity:0, scale:0.9}}
+          animate={{opacity:1, scale:1, transition:{duration:0.6, delay:0.48, ease:[0, 0.71, 0.2, 1.01]}}}
+        >
           <div className="w-[45%] h-min flex flex-col justify-center items-start sm:w-full sm:justify-start sm:items-center">
             <h1 className="w-min h-min text-[44px] font-[900] uppercase">skills</h1>
             <h2 className="w-[90%] h-min flex justify-start items-center text-dark text-[16px] font-[700] mt-[8px] sm:text-center">Here, my old and fresh skills. All will be dedicated to crafting digital experiences.</h2>
@@ -89,7 +94,7 @@ const Skills = () => {
           <div className="w-[54%] h-auto self-end md:self-center sm:w-[90%] sm:mt-[36px]">
             <Image src={developerPicture} alt="developer-picture" />
           </div>
-        </div>
+        </motion.div>
 
         <div className="w-full h-min mt-[96px] flex flex-col items-center lg:mt-[68px] sm:mt-[40px]">
           <motion.div

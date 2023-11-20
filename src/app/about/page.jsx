@@ -29,7 +29,11 @@ const About = () => {
   return (
     <div id="about" className="w-full h-min min-h-screen flex justify-center items-start bg-light text-primary">
       <div className="w-[90%] max-w-[1000px] h-min mt-[160px] flex flex-col justify-start items-center sm:mt-[92px]">
-        <div className="w-full h-min flex justify-between items-center sm:flex-col-reverse">
+        <motion.div
+          className="w-full h-min flex justify-between items-center sm:flex-col-reverse"
+          initial={{opacity:0, scale:0.9}}
+          animate={{opacity:1, scale:1, transition:{duration:0.6, delay:0.48, ease:[0, 0.71, 0.2, 1.01]}}}
+        >
           <div className="w-[50%] h-auto self-end md:self-center sm:w-[80%] sm:mt-[36px]">
             <Image src={workSpace} alt="workSpace-picture" />
           </div>
@@ -37,7 +41,7 @@ const About = () => {
             <h1 className="w-min h-min text-[44px] font-[900] uppercase">about</h1>
             <h2 className="w-[90%] h-min flex justify-start items-center text-dark text-[16px] font-[700] mt-[8px] sm:text-center">I&apos;m&nbsp;a front-end developer based in Bangkok, Thailand. I love to create things. And now I have a passion for bringing ideas to life through code.</h2>
           </div>
-        </div>
+        </motion.div>
 
         <div className="w-full h-min flex flex-col justify-center items-center gap-[44px] mt-[120px] mb-[140px] sm:mt-[40px]">
           {aboutContent.map(content =>(
