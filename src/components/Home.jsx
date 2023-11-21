@@ -24,9 +24,16 @@ export default function Home() {
   }, [])
   const [spotify, setSpotify] = useState()
 
+  let leftPosition = 0;
+
+  if (spotify) {
+    const trackNameLength = spotify.recently.trackName.length;
+    leftPosition = trackNameLength * 9 * -1;
+  }
+
   const marqueeVariants = {
     animate: {
-      x: [260, -220],
+      x: [260, leftPosition],
       transition: {
         x: {
           repeat: 'infinite',
@@ -100,17 +107,18 @@ export default function Home() {
                 </svg>
               </Link>
             </div>
-            <div className="w-full h-full flex flex-col ml-[8px] text-[14px] text-dark lg:text-[12px] lg:ml-[2px]">
+            <div className="w-full h-full flex flex-col ml-[8px] text-[14px] text-dark overflow-hidden lg:text-[12px] lg:ml-[2px]">
               <p className="text-[12px] text-dark/[.3] lg:text-[10px]">Spotify Recently Played Track</p>
               {spotify &&
-                <Link href={spotify.recently.trackUrl} target="_blank" className="w-full h-min overflow-hidden text-dark hover:underline">
-                  <motion.div
-                    className="w-fit whitespace-nowrap"
-                    variants={marqueeVariants}
-                    animate="animate"
-                  >
-                    {spotify && <div>{spotify.recently.trackName}</div>}
-                  </motion.div>
+                <Link href={spotify.recently.trackUrl} target="_blank" className="w-full h-min text-dark overflow-hidden hover:underline">
+                  {spotify &&
+                    <motion.div
+                      id="myDiv"
+                      className="w-fit whitespace-nowrap"
+                      variants={marqueeVariants}
+                      animate="animate">
+                      {spotify.recently.trackName}
+                    </motion.div>}
                 </Link>
               }
               {spotify &&
