@@ -49,7 +49,7 @@ const About = () => {
               key={content.title}
               className="w-[80%] h-min grid grid-cols-[20%,auto] justify-items-start items-start lg:w-[85%] lg:grid-cols-[25%,auto] md:w-[95%] sm:flex sm:flex-col"
               initial={{opacity:0, y:200}}
-              whileInView={{opacity:1, y:0, transition:{duration:0.6, delay:0.15, ease:[0, 0.71, 0.2, 1.01]}}}
+              whileInView={{opacity:1, y:0, transition:{duration:0.6, ease:[0, 0.71, 0.2, 1.01]}}}
               viewport={{once: true}}
             >
               <div className="w-full flex justify-start items-center leading-[27px] text-primary text-[14px] font-[600] uppercase">

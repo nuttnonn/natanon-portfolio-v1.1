@@ -7,9 +7,9 @@ import {motion} from 'framer-motion'
 const Card = ({ title, description, image, imageAlt, url, reverse }) => {
   const handleDirection = () => {
     if (reverse) {
-      return {opacity:0, x:200}
+      return {opacity:0, x:300}
     } else {
-      return {opacity:0, x:-200}
+      return {opacity:0, x:-300}
     }
   }
 
@@ -17,7 +17,7 @@ const Card = ({ title, description, image, imageAlt, url, reverse }) => {
     <motion.div
       className={`flex ${reverse === true && 'flex-row-reverse'} justify-center items-center gap-[40px] bg-dark/50 rounded-2xl shadow-xl p-[20px] md:gap-[16px] sm:flex-col`}
       initial={handleDirection}
-      whileInView={{opacity:1, x:0, transition:{duration:0.6, delay:0.3, ease:[0, 0.71, 0.2, 1.01]}}}
+      whileInView={{opacity:1, x:0, transition:{duration:0.8, delay:0.1, ease:[0, 0.71, 0.2, 1.01]}}}
       viewport={{once: true}}
     >
       <Link href={url} target="_blank" className="w-[45%] overflow-hidden rounded-md sm:w-[95%]">

@@ -3,6 +3,7 @@
 import React from 'react'
 import Card from '../../components/Card'
 import weatherAppPicture from '../../../public/weather-app.png';
+import restaurantAppPicture from '../../../public/restaurant-app.png'
 import investmentCalculatorAppPicture from '../../../public/investment-calculator-app.png';
 import projectManagerAppPicture from '../../../public/project-manager-app.png';
 import {motion} from 'framer-motion'
@@ -26,12 +27,19 @@ const Projects = () => {
             url="https://react-weather-app-cu3.pages.dev/"
           />
           <Card
+            title="Restaurant App"
+            description="A weather forecast dashboard to show current day and daily next 5 days forecast data using a free Weather-API from Open Weather Map. Used a GeoDB-Cities API from Rapid API to make users choose data to forecast by city."
+            image={restaurantAppPicture}
+            imageAlt="restaurant-app-demo"
+            url="https://react-restaurant-app.pages.dev/"
+            reverse
+          />
+          <Card
             title="Project Manager App"
             description="In a project manager application, the user can create a project and define the date and details of the project. Also inside the project user can create a task for the project."
             image={projectManagerAppPicture}
             imageAlt="project-manager-app-demo"
             url="https://project-management-app.pages.dev/"
-            reverse
           />
           <Card
             title="Investment Calculator App"
@@ -40,6 +48,7 @@ current savings, yearly savings, expected interest and investment duration."
             image={investmentCalculatorAppPicture}
             imageAlt="investment-calculator-app"
             url="https://investment-calculator-app.pages.dev/"
+            reverse
           />
         </div>
       </div>

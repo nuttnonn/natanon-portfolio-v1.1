@@ -111,7 +111,7 @@ const Skills = () => {
                 key={skillCategory.category}
                 className="col-span-2 first:col-span-3 flex flex-col border-2 border-dark/[.5] rounded-[6px]"
                 initial={{opacity:0, y:200}}
-                whileInView={{opacity:1, y:0, transition:{duration:0.6, delay:0.15, ease:[0, 0.71, 0.2, 1.01]}}}
+                whileInView={{opacity:1, y:0, transition:{duration:0.6, ease:[0, 0.71, 0.2, 1.01]}}}
                 viewport={{once: true}}
               >
                 <h3 className="w-full h-min pr-[12px] text-end text-[12px] rounded-t-[3px] font-[600] uppercase text-dark bg-secondary/[.3] border-b-2 border-dark/[.5] sm:text-start sm:pl-[12px]">
